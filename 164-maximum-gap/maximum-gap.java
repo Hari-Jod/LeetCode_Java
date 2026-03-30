@@ -8,7 +8,10 @@ class Solution {
         if(n<1) return 0;
         for(int i = 0; i<n-1;i++){
             int maxgap = Math.abs(nums[i] - nums[i+1]);
-            gap = Math.max(gap,maxgap);
+            if(n>1 && gap<=maxgap ){
+            gap = maxgap;
+            }
+            else gap = gap;
         } 
         return gap;
     }
