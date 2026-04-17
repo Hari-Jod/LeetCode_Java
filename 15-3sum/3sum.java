@@ -19,6 +19,7 @@ class Solution {
                 }
             }
         }
-        return new ArrayList<>(res);
+        List<List<Integer>> list = new ArrayList<>(res);
+        return list;
     }
 }
