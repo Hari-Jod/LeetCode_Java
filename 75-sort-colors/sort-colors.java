@@ -14,16 +14,16 @@ class Solution {
         }
         int b = 0;
         for(int i = 0;i < zeroes;i++){
-            nums[b] = 0;
-            b++;
+            nums[b++] = 0;
+            // b++;
         }
         for(int i = 0;i < ones;i++){
-            nums[b] = 1;
-            b++;
+            nums[b++] = 1;
+            // b++;
         }
         for(int i = 0;i < twos;i++){
-            nums[b] = 2;
-            b++;
+            nums[b++] = 2;
+            // b++;
         }
        
     }
