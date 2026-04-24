@@ -8,11 +8,11 @@ class Solution {
             res.append(word1.charAt(i));
             res.append(word2.charAt(i));
         }
-        if(word1.length() > n){
+        if(word1.length() > n)
             res.append(word1.substring(n));
-        } else {
+         else 
             res.append(word2.substring(n));
-        }
+        
         return res + "";
     }
 }
