@@ -13,18 +13,14 @@ class Solution {
                 twos++;
         }
         int b = 0;
-        for(int i = 0;i < zeroes;i++){
-            nums[b++] = 0;
-
+        while (b < n) {
+            if (b < zeroes) {
+                nums[b++] = 0;
+            } else if (b < zeroes + ones) {
+                nums[b++] = 1;
+            } else {
+                nums[b++] = 2;
+            }
         }
-        for(int i = 0;i < ones;i++){
-            nums[b++] = 1;
-
-        }
-        for(int i = 0;i < twos;i++){
-            nums[b++] = 2;
-          
-        }
-       
     }
 }
