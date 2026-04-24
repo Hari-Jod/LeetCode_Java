@@ -25,17 +25,6 @@ class Solution {
             nums[b] = 2;
             b++;
         }
-        // while (b < n) {
-        //     if (b < zeroes) {
-        //         nums[b] = 0;
-        //         b++;
-        //     } else if (b < zeroes + ones) {
-        //         nums[b] = 1;
-        //         b++;
-        //     } else {
-        //         nums[b] = 2;
-        //         b++;
-        //     }
-        // }
+       
     }
 }
