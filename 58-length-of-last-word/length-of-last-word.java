@@ -6,7 +6,7 @@ class Solution {
         for(int i = n - 1; i >= 0; i--){
             if(s1.charAt(i) == ' '){
                 break;
-            }else count++;
+            }else{ count++;}
         }
         return count;
     }
