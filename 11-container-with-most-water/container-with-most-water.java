@@ -11,11 +11,12 @@ class Solution {
             if(height[i] < height[j]){
                 area = height[i] * (j - i);
                 i++;
+            max = Math.max(area, max);
             } else {
                 area = height[j] * (j - i);
                 j--;
-            }
             max = Math.max(area, max);
+            }
         }   
         return max;
     }
