@@ -3,18 +3,19 @@ class Solution {
         int n = nums.length;
         Arrays.sort(nums);
         Set<List<Integer>> res = new HashSet<>();
-        for(int i = 0;i<n-2;i++){
+
+        for(int i = 0; i < n- 2; i++) {
             int left = i + 1;
             int right = n - 1;
-            while(left < right){
+            while(left < right) {
                 int sum = nums[i] + nums[left] + nums[right];
                 if(sum == 0){
-                    res.add(Arrays.asList(nums[i],nums[left],nums[right]));
+                    res.add(Arrays.asList(nums[i], nums[left],nums[right]));
                     left++;
                     right--;
-                } else if(sum > 0){
+                } else if(sum > 0) {
                     right--;
-                } else{
+                } else {
                     left++;
                 }
             }
