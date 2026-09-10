@@ -9,8 +9,8 @@ class Solution {
             else if(sum < target)
                 left++;
             else 
-                return new int[]{left+1,right+1};
-        }
-    return new int[]{};
+                return new int[]{left + 1, right + 1};
+        }   
+        return new int[]{};
     }
 }
