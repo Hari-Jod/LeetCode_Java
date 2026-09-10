@@ -13,12 +13,10 @@ class Solution {
 
         for(int i = 0; i < n; i++) {
             prefixMax = Math.max(prefixMax, nums[i]);
-
-            int instablility = prefixMax - suffixMin[i];
-
-            if(instablility <= k)
-                return i;
-        }   
-             return -1;
+        int instability = prefixMax - suffixMin[i];
+        if(instability <= k)
+            return i;
+        }
+        return -1;
     }
 }
