@@ -1,10 +1,10 @@
 class Solution {
     public int reverseDegree(String s) {
-        int prod = 0;
-        for(int i = 0;i < s.length(); i++) {
-            int diff = 26 - (s.charAt(i) - 'a');
-            prod += (i + 1) * diff; 
-        }   
-        return prod;
+        int product = 0;
+        int n = s.length();
+        for (int i = 0; i < n; i++) {
+            product += (i + 1) * (26 - (s.charAt(i) - 'a'));
+        }
+        return product;
     }
 }
