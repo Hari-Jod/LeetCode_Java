@@ -1,38 +1,29 @@
 class Solution {
 
-    public int reverse(int y) {
+    public int reverse(int x) {
 
-        long x = y;
+        int rev = 0;
 
-        if (x < 0)
-            x = -x;
+        while (x != 0) {
 
-        long rev = 0L;
-        int length = 0;
-        long temp = x;
+            int digit = x % 10;
+            x /= 10;
 
-        while (temp > 0) {
-            temp /= 10;
-            length++;
+            // Check positive overflow
+            if (rev > Integer.MAX_VALUE / 10 ||
+                (rev == Integer.MAX_VALUE / 10 && digit > 7)) {
+                return 0;
+            }
+
+            // Check negative overflow
+            if (rev < Integer.MIN_VALUE / 10 ||
+                (rev == Integer.MIN_VALUE / 10 && digit < -8)) {
+                return 0;
+            }
+
+            rev = rev * 10 + digit;
         }
 
-        long lemp = x;
-
-        while (lemp > 0) {
-
-            rev += (long) ((lemp % 10) * Math.pow(10, length - 1));
-
-            lemp /= 10;
-            length--;
-        }
-
-        if (y < 0)
-            rev = -rev;
-
-        // Check overflow before casting
-        if (rev > Integer.MAX_VALUE || rev < Integer.MIN_VALUE)
-            return 0;
-
-        return (int) rev;
+        return rev;
     }
 }
